@@ -1,0 +1,17 @@
+@import '../colors/colors.scss';
+@import '../fonts/fonts.scss';
+@import '../mixins/mixins.scss';
+
+form{
+    @include flex(column nowrap, stretch, flex-start, initial);
+    label{
+        padding-bottom: 10px;
+    }
+    input{
+        padding: 15px 20px;
+        background-color: $white;
+        margin-bottom: 20px;
+    }
+    
+}
+

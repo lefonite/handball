@@ -1,0 +1,44 @@
+@import '../colors/colors.scss';
+@import '../fonts/fonts.scss';
+@import '../mixins/mixins.scss';
+
+.logo{
+    @include flex(row nowrap, center, flex-start, 20px);
+    h2{
+        color: $white;
+    }
+    span{
+        padding-top: 14px;
+        font-family: 'Benzin-Medium';
+        font-size: 1.3735rem;
+        letter-spacing: 0.04119rem;
+        background-image: $linear;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    cursor: pointer;
+}
+
+
+.logo:hover{
+    opacity: 60%;
+    transition: 0.5s;
+}
+
+@media (max-width: 990px) {
+    .logo{
+        gap: 10px;
+        h2{
+            @include Benzin-Bold(0.875rem, 1.225rem, 0.03rem); 
+        }
+        span{
+            @include Benzin-Bold(0.875rem, 1.225rem, 0.03rem); 
+        }
+        svg{
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+

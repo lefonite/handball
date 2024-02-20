@@ -1,0 +1,54 @@
+@import '../colors/colors.scss';
+@import '../fonts/fonts.scss';
+@import '../mixins/mixins.scss';
+
+.contacts{
+    padding: $space-top $space-side;
+    h2{
+        padding-bottom: 40px;
+    }
+    &__wrapper{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        gap: 20px;
+        align-items: stretch;
+    }
+    &__cart{
+        flex-basis: 460px;
+        flex-grow: 1;
+    }
+    &__item{
+        background-color: $white;
+        padding: 20px;
+        @include flex(column nowrap, flex-start, space-between, 40px);
+        flex-basis: 260px;
+        flex-grow: 1;
+    }
+}
+
+.contacts-list{
+    h3{
+        padding-bottom: 20px;
+    }
+    li{
+        opacity: 0.7;
+    }
+    li:not(:last-child){
+        padding-bottom: 15px;
+    }
+}
+
+@media (max-width: 990px) {
+    .contacts{
+        padding: $space-top $space-side-adaptive;
+    }
+}
+
+@media (max-width: 460px) {
+    .contacts{
+        h2{
+            padding-bottom: 20px;
+        }
+    }
+}

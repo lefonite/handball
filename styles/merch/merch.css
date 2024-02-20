@@ -1,0 +1,377 @@
+@charset "UTF-8";
+main {
+  background-color: #E9E9F1;
+}
+
+main {
+  background-color: #E9E9F1;
+}
+
+@font-face {
+  font-family: "Benzin-ExtraBold";
+  src: url("../font/Benzin-ExtraBold.woff2") format("woff2"), url("../font/Benzin-ExtraBold.woff") format("woff"), url("../font/Benzin-ExtraBold.ttf") format("truetype"), url("../font/Benzin-ExtraBold.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Bold";
+  src: url("../font/Benzin-Bold.woff2") format("woff2"), url("../font/Benzin-Bold.woff") format("woff"), url("../font/Benzin-Bold.ttf") format("truetype"), url("../font/Benzin-Bold.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Semibold";
+  src: url("../font/Benzin-Semibold.woff2") format("woff2"), url("../font/Benzin-Semibold.woff") format("woff"), url("../font/Benzin-Semibold.ttf") format("truetype"), url("../font/Benzin-Semibold.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Medium";
+  src: url("../font/Benzin-Medium.woff2") format("woff2"), url("../font/Benzin-Medium.woff") format("woff"), url("../font/Benzin-Medium.ttf") format("truetype"), url("../font/Benzin-Medium.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Regular";
+  src: url("../font/Benzin-Regular.woff2") format("woff2"), url("../font/Benzin-Regular.woff") format("woff"), url("../font/Benzin-Regular.ttf") format("truetype"), url("../font/Benzin-Regular.eot") format("embedded-opentype");
+}
+body {
+  font-family: "Benzin-Medium";
+}
+
+p, a, li {
+  font-family: "Benzin-Medium";
+  font-size: 0.875rem;
+  line-height: 1.225rem;
+  letter-spacing: 0.03rem;
+}
+
+.nameCard {
+  font-family: "Benzin-Bold";
+  font-size: 0.875rem;
+  line-height: 1.225rem;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+}
+
+.help-txt {
+  font-family: "Benzin-Medium";
+  font-size: 0.75rem;
+  line-height: 1.225rem;
+  letter-spacing: 0.03rem;
+}
+
+h1 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 5vw;
+  line-height: initial;
+  letter-spacing: 0.22838rem;
+  text-transform: uppercase;
+}
+h1 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 1.5rem;
+  line-height: initial;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+}
+h2 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 1.125rem;
+  line-height: initial;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+}
+h3 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h4 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 1.125rem;
+  line-height: initial;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+}
+h4 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 460px) {
+  h2 {
+    font-family: "Benzin-ExtraBold";
+    font-size: 1.25rem;
+    line-height: initial;
+    letter-spacing: 0.045rem;
+  }
+}
+.merch {
+  background-color: #000014;
+  padding-bottom: 80px;
+}
+.merch__txt {
+  background-image: url("../img/photos/EL1.png"), url("../img/photos/EL2.png"); /* Замените на пути к вашим изображениям */
+  background-position: top left, bottom right; /* Выравнивание изображений по центру */
+  background-repeat: no-repeat, no-repeat; /* Запрет повторения изображений */
+  background-size: 25%;
+  padding: 110px 40px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.merch__txt h1 {
+  font-size: 3vw;
+}
+.merch__txt h1, .merch__txt h2 {
+  text-align: center;
+  color: #ffffff;
+}
+.merch__description {
+  opacity: 0.7;
+  max-width: 450px;
+  text-align: center;
+  color: #ffffff;
+}
+.merch__bullets {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.merch__bullets h2 {
+  color: #ffffff;
+}
+.merch__bullets h2 b {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Benzin-Medium";
+  font-size: 0.875rem;
+  line-height: 1.225rem;
+  letter-spacing: initial;
+}
+.merch__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 40px;
+}
+.merch .switch-field {
+  padding: 0 40px 40px;
+}
+
+.product-card {
+  background-color: #333343;
+}
+.product-card__img {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: initial;
+  justify-content: flex-end;
+  gap: initial;
+  padding: 6px;
+  background-color: #ffffff;
+  background-image: url(../img/photos/stub.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 9/10;
+}
+.product-card__img--1 {
+  background-image: url(../img/products/1.png);
+}
+.product-card__img--2 {
+  background-image: url(../img/products/2.png);
+}
+.product-card__img--3 {
+  background-image: url(../img/products/3.png);
+}
+.product-card__img--4 {
+  background-image: url(../img/products/4.png);
+}
+.product-card__img--5 {
+  background-image: url(../img/products/5.png);
+}
+.product-card__img--6 {
+  background-image: url(../img/products/6.png);
+}
+.product-card__img--7 {
+  background-image: url(../img/products/7.png);
+}
+.product-card__img--8 {
+  background-image: url(../img/products/8.png);
+}
+.product-card .nameCard {
+  color: #ffffff;
+}
+.product-card__price {
+  color: #ffffff;
+}
+.product-card__txt {
+  padding: 20px;
+}
+.product-card__size li {
+  font-family: "Benzin-Medium";
+  font-size: 0.75rem;
+  line-height: 1.225rem;
+  letter-spacing: initial;
+  color: #ffffff;
+  opacity: 0.7;
+}
+.product-card__size {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.buy-card {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: initial;
+}
+.buy-card__wrapper {
+  padding: 40px;
+}
+.buy-card__img {
+  background-color: #ffffff;
+}
+.buy-card__txt h3 {
+  padding-bottom: 20px;
+}
+.buy-card__txt p {
+  opacity: 0.7;
+}
+.buy-card__feature {
+  padding: 40px 0;
+}
+.buy-card__feature span {
+  opacity: 0.7;
+}
+.buy-card__feature p {
+  padding-top: 10px;
+}
+.buy-card__feature .size {
+  padding: 10px 0;
+}
+.buy-card__feature2 {
+  padding-bottom: 20px;
+}
+.buy-card__feature2 :first-child {
+  padding-right: 20px;
+}
+.buy-card__feature2 li {
+  display: inline-block;
+}
+.buy-card__actions {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 10px;
+}
+.buy-card__actions2 {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.amount {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  background: #E9E9F1;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+.custom-radio {
+  margin: 5px 5px 5px 0px;
+  height: 40px;
+  width: 45px;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  color: black;
+  background-color: #E9E9F1;
+  position: relative;
+}
+.custom-radio input {
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+.custom-radio label {
+  width: inherit;
+  height: inherit;
+  display: inline-block;
+  background-color: inherit;
+  border-radius: 6px;
+}
+.custom-radio input:checked + label {
+  background: #000014;
+  color: white;
+}
+
+@media (max-width: 990px) {
+  .merch__txt {
+    padding: 110px 20px;
+    gap: 20px;
+  }
+  .merch__list {
+    padding: 0 20px;
+  }
+  .merch .switch-field {
+    padding: 0 20px 40px;
+    overflow: scroll;
+  }
+  .merch__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .merch__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 460px) {
+  .merch__list {
+    gap: 10px;
+  }
+  .product-card__txt {
+    padding: 10px;
+  }
+  .product-card .btn-buy a svg {
+    width: 40px;
+    height: 40px;
+  }
+}/*# sourceMappingURL=merch.css.map */

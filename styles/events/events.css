@@ -1,0 +1,200 @@
+@charset "UTF-8";
+main {
+  background-color: #E9E9F1;
+}
+
+main {
+  background-color: #E9E9F1;
+}
+
+@font-face {
+  font-family: "Benzin-ExtraBold";
+  src: url("../font/Benzin-ExtraBold.woff2") format("woff2"), url("../font/Benzin-ExtraBold.woff") format("woff"), url("../font/Benzin-ExtraBold.ttf") format("truetype"), url("../font/Benzin-ExtraBold.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Bold";
+  src: url("../font/Benzin-Bold.woff2") format("woff2"), url("../font/Benzin-Bold.woff") format("woff"), url("../font/Benzin-Bold.ttf") format("truetype"), url("../font/Benzin-Bold.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Semibold";
+  src: url("../font/Benzin-Semibold.woff2") format("woff2"), url("../font/Benzin-Semibold.woff") format("woff"), url("../font/Benzin-Semibold.ttf") format("truetype"), url("../font/Benzin-Semibold.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Medium";
+  src: url("../font/Benzin-Medium.woff2") format("woff2"), url("../font/Benzin-Medium.woff") format("woff"), url("../font/Benzin-Medium.ttf") format("truetype"), url("../font/Benzin-Medium.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Regular";
+  src: url("../font/Benzin-Regular.woff2") format("woff2"), url("../font/Benzin-Regular.woff") format("woff"), url("../font/Benzin-Regular.ttf") format("truetype"), url("../font/Benzin-Regular.eot") format("embedded-opentype");
+}
+body {
+  font-family: "Benzin-Medium";
+}
+
+p, a, li {
+  font-family: "Benzin-Medium";
+  font-size: 0.875rem;
+  line-height: 1.225rem;
+  letter-spacing: 0.03rem;
+}
+
+.nameCard {
+  font-family: "Benzin-Bold";
+  font-size: 0.875rem;
+  line-height: 1.225rem;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+}
+
+.help-txt {
+  font-family: "Benzin-Medium";
+  font-size: 0.75rem;
+  line-height: 1.225rem;
+  letter-spacing: 0.03rem;
+}
+
+h1 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 5vw;
+  line-height: initial;
+  letter-spacing: 0.22838rem;
+  text-transform: uppercase;
+}
+h1 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 1.5rem;
+  line-height: initial;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+}
+h2 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 1.125rem;
+  line-height: initial;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+}
+h3 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h4 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 1.125rem;
+  line-height: initial;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+}
+h4 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 460px) {
+  h2 {
+    font-family: "Benzin-ExtraBold";
+    font-size: 1.25rem;
+    line-height: initial;
+    letter-spacing: 0.045rem;
+  }
+}
+.events {
+  background-color: #ffffff;
+  padding: 80px 40px;
+}
+.events__wrapper li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.events__title {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.events__title h2 {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: initial;
+  gap: initial;
+}
+
+.events-card {
+  background-color: #E9E9F1;
+  position: relative;
+  padding: 20px 20px 20px 30px;
+}
+.events-card__info {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  opacity: 0.7;
+}
+.events-card__icon {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: initial;
+  gap: 10px;
+}
+.events-card__icon p {
+  display: inline-block;
+}
+.events-card h4 {
+  padding: 20px 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: initial;
+  gap: 20px;
+}
+
+.events-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 10px; /* Ширина обводки */
+  background: linear-gradient(341deg, #EF6F24, #F9A33B); /* Градиент из двух цветов */
+}
+
+@media (max-width: 990px) {
+  .events {
+    padding: 80px 20px;
+  }
+  .events h4 {
+    font-family: "Benzin-Bold";
+    font-size: 0.875rem;
+    line-height: 1.225rem;
+    letter-spacing: 0.03rem;
+  }
+}
+@media (max-width: 780px) {
+  .events-card h4 {
+    gap: 10px;
+  }
+}/*# sourceMappingURL=events.css.map */

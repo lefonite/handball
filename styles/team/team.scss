@@ -1,0 +1,55 @@
+@import '../colors/colors.scss';
+@import '../fonts/fonts.scss';
+@import '../mixins/mixins.scss';
+
+.team{
+    background: $background url('../img/photos/ball.png') bottom right no-repeat;
+    @include flex(row wrap, stretch, stretch, initial);
+    &__img{
+        background-image: url(../img/photos/team.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50%;
+        aspect-ratio: 16 / 9;
+    }
+    &__wrapper{
+        padding: 40px;
+        @include flex(column wrap, flex-start, space-between, 60px);
+    }
+    &__title{
+        h2{
+            color: $white;
+            margin-bottom: 30px;
+        }
+        p{
+            color: $white;
+            opacity: 0.7;
+            max-width: 450px;
+        }
+    }
+
+}
+
+
+@media (max-width: 1060px) {
+    .team{
+        &__img{
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 990px) {
+    .team{
+        &__wrapper{
+            padding: 40px $space-side-adaptive;
+            gap: 40px;
+        }
+        &__title{
+            h2{
+                margin-bottom: 10px;
+            }
+        }
+    
+    }
+}

@@ -1,0 +1,157 @@
+@import '../colors/colors.scss';
+@import '../fonts/fonts.scss';
+@import '../mixins/mixins.scss';
+
+
+
+.mobile-menu {
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 40px;
+    top: 0;
+    background-color: $background;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 9999999;
+    &__btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 30px;
+        cursor: pointer;
+        transition: .4s;
+    }
+  
+    &__icon {
+        display: block;
+        position: relative;
+        background: rgba(255,255,255,1);
+        width: 90%;
+        height: 4px;
+        transition: .4s;
+
+        &::after,
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            background: rgba(255,255,255,1);
+            width: 100%;
+            height: 4px;
+            transition: .4s;
+        }
+        &::after {
+            top: 8px;
+        }
+        &::before {
+            top: -8px;
+        }
+    }
+  
+    &__container {
+        position: fixed;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-end;
+        justify-content: stretch;
+        gap: 20px;
+        top: 90px;
+        right: 0;
+        z-index: 999;
+        width: 0;
+        opacity: 1;
+        overflow: hidden;
+        background-color: rgba($color: $background, $alpha: 0.5);
+
+    }
+  
+    &__list {
+        padding: 0px 40px 20px;
+        background-color: $background;
+        width: 40%;
+        height: 100%;
+    }
+    &__item h3{
+        padding-bottom: 25px;
+        color: $white;
+    }
+      
+    .switch-field {
+        padding-top: 20px;
+    }
+  
+    &__link {
+        text-decoration: none;
+        color: #fff;
+    }
+   
+    &__checkbox {
+        display: none;
+        &:checked ~ {
+            .mobile-menu {
+                &__nav {
+                    opacity: 1;
+                }
+                &__container {
+                    height: 100%;
+                    width: 100%;
+                }
+                &__btn {
+                    .mobile-menu__icon {
+                        background: transparent;
+
+                        &::before,
+                        &::after {
+                            top: 0;
+                        }
+                        &::after {
+                            transform: rotate(-45deg);
+                            -webkit-transform: rotate(-45deg);
+                        }
+                        &::before {
+                            transform: rotate(45deg);
+                            -webkit-transform: rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 990px) {
+    .mobile-menu {
+        padding: 10px $space-side-adaptive;
+        height: 40px;
+        &__list {
+            padding: 0px  $space-side-adaptive 20px;
+        }
+        &__item h3{
+            @include Benzin-Bold(0.875rem, 1.225rem, 0.03rem); 
+            padding-bottom: 20px;
+        }
+        &__container {
+            top: 60px;
+        }
+    }
+}
+
+@media (max-width: 757px) {
+    .mobile-menu {
+        &__list {
+            padding: $space-side-adaptive;
+            width: 100%;
+        }
+        &__container {
+            align-items: flex-start;
+        }
+    }
+}

@@ -1,0 +1,196 @@
+main {
+  background-color: #E9E9F1;
+}
+
+main {
+  background-color: #E9E9F1;
+}
+
+@font-face {
+  font-family: "Benzin-ExtraBold";
+  src: url("../font/Benzin-ExtraBold.woff2") format("woff2"), url("../font/Benzin-ExtraBold.woff") format("woff"), url("../font/Benzin-ExtraBold.ttf") format("truetype"), url("../font/Benzin-ExtraBold.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Bold";
+  src: url("../font/Benzin-Bold.woff2") format("woff2"), url("../font/Benzin-Bold.woff") format("woff"), url("../font/Benzin-Bold.ttf") format("truetype"), url("../font/Benzin-Bold.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Semibold";
+  src: url("../font/Benzin-Semibold.woff2") format("woff2"), url("../font/Benzin-Semibold.woff") format("woff"), url("../font/Benzin-Semibold.ttf") format("truetype"), url("../font/Benzin-Semibold.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Medium";
+  src: url("../font/Benzin-Medium.woff2") format("woff2"), url("../font/Benzin-Medium.woff") format("woff"), url("../font/Benzin-Medium.ttf") format("truetype"), url("../font/Benzin-Medium.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Regular";
+  src: url("../font/Benzin-Regular.woff2") format("woff2"), url("../font/Benzin-Regular.woff") format("woff"), url("../font/Benzin-Regular.ttf") format("truetype"), url("../font/Benzin-Regular.eot") format("embedded-opentype");
+}
+body {
+  font-family: "Benzin-Medium";
+}
+
+p, a, li {
+  font-family: "Benzin-Medium";
+  font-size: 0.875rem;
+  line-height: 1.225rem;
+  letter-spacing: 0.03rem;
+}
+
+.nameCard {
+  font-family: "Benzin-Bold";
+  font-size: 0.875rem;
+  line-height: 1.225rem;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+}
+
+.help-txt {
+  font-family: "Benzin-Medium";
+  font-size: 0.75rem;
+  line-height: 1.225rem;
+  letter-spacing: 0.03rem;
+}
+
+h1 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 5vw;
+  line-height: initial;
+  letter-spacing: 0.22838rem;
+  text-transform: uppercase;
+}
+h1 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 1.5rem;
+  line-height: initial;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+}
+h2 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 1.125rem;
+  line-height: initial;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+}
+h3 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h4 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 1.125rem;
+  line-height: initial;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+}
+h4 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 460px) {
+  h2 {
+    font-family: "Benzin-ExtraBold";
+    font-size: 1.25rem;
+    line-height: initial;
+    letter-spacing: 0.045rem;
+  }
+}
+.trainer {
+  padding: 80px 40px;
+}
+.trainer__wrapper {
+  padding-top: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.trainer__info {
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.trainer__card {
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: initial;
+  flex-basis: 640px;
+  flex-grow: 1;
+}
+.trainer__img {
+  background-image: url(../img/photos/stub.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 250px;
+  aspect-ratio: 9/12;
+}
+.trainer__img--tr1 {
+  background-image: url(../img/photos/tr1.png);
+}
+.trainer__img--tr2 {
+  background-image: url(../img/photos/tr2.png);
+}
+.trainer__txt > h4 {
+  padding-top: 20px;
+}
+.trainer__bullets {
+  opacity: 0.7;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+@media (max-width: 990px) {
+  .trainer {
+    padding: 80px 20px;
+  }
+}
+@media (max-width: 640px) {
+  .trainer__card {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: initial;
+  }
+  .trainer__img {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+}
+@media (max-width: 460px) {
+  .trainer__wrapper {
+    padding-top: 20px;
+  }
+}/*# sourceMappingURL=trainer.css.map */

@@ -1,0 +1,55 @@
+@import '../colors/colors.scss';
+@import '../fonts/fonts.scss';
+@import '../mixins/mixins.scss';
+
+
+
+.btn-default{
+    background-color: $background;
+    cursor: pointer;
+    padding: 16px 32px;
+    a{
+        color: $white;
+    }
+    &--light{
+        background-color: $background-light;
+        a{
+            color: $background;
+        }
+    }
+}
+.btn-default:hover{
+    background-image: $linear;
+}
+
+.btn-action{
+    a{
+        @include flex(row nowrap, center, initial, 20px);
+        text-align: left;
+        color: $white;
+        transition: filter 0.3s ease;
+
+    }
+}
+.btn-action:hover a svg{
+    filter: drop-shadow(0px 0px 8px rgba(247, 153, 54, 0.60)) drop-shadow(0px 0px 5px rgba(224, 35, 3, 0.40));
+    transition: filter 0.3s ease;
+}
+.btn-buy{
+    display: contents;
+    a{
+        svg{
+            rect{
+                fill: $background;
+                background-color: $background;
+            }
+        }
+    }
+}
+
+.btn-buy:hover{
+    a{
+        opacity: 0.7;
+    }
+}
+

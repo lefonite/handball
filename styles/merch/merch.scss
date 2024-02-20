@@ -1,0 +1,243 @@
+@import '../colors/colors.scss';
+@import '../fonts/fonts.scss';
+@import '../mixins/mixins.scss';
+
+
+.merch{
+    background-color: $background;
+    padding-bottom: $space-top;
+    &__txt{
+        background-image: url('../img/photos/EL1.png'), url('../img/photos/EL2.png'); /* Замените на пути к вашим изображениям */
+        background-position: top left, bottom right; /* Выравнивание изображений по центру */
+        background-repeat: no-repeat, no-repeat; /* Запрет повторения изображений */
+        background-size: 25%;
+        padding: 110px $space-side ;
+    
+        h1{
+            font-size: 3vw;
+        }
+        @include flex(column wrap, center, center, 30px);
+        h1,h2{
+            text-align: center;
+            color: $white;
+        }
+    }
+    &__description{
+        opacity: 0.7;
+        max-width: 450px;
+        text-align: center;
+        color: $white;
+    }
+    &__bullets{
+        @include flex(row wrap, center, center, 20px);
+        h2{
+            color: $white;
+            b{
+                color: $white;
+                text-transform: uppercase;
+                @include Benzin-Medium(0.875rem, 1.225rem, initial); 
+            }
+        }
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+        padding: 0 $space-side;
+    }
+    .switch-field{
+        padding: 0 40px 40px;
+    }
+}
+
+.product-card{
+    background-color: $grey;
+    &__img{
+        @include flex(row nowrap, initial, flex-end, initial);
+        padding: 6px;
+        background-color: $white;
+        background-image: url(../img/photos/stub.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        aspect-ratio: 9 / 10;
+        &--1{
+            background-image: url(../img/products/1.png);
+        }
+        &--2{
+            background-image: url(../img/products/2.png);
+        }
+        &--3{
+            background-image: url(../img/products/3.png);
+        }
+        &--4{
+            background-image: url(../img/products/4.png);
+        }
+        &--5{
+            background-image: url(../img/products/5.png);
+        }
+        &--6{
+            background-image: url(../img/products/6.png);
+        }
+        &--7{
+            background-image: url(../img/products/7.png);
+        }
+        &--8{
+            background-image: url(../img/products/8.png);
+        }
+    }
+    .nameCard{
+        color: $white;
+    }
+    &__price{
+        color: $white;
+    }
+    &__txt{
+        padding: 20px;
+    }
+    &__size li{
+        @include Benzin-Medium(0.75rem, 1.225rem, initial); 
+        color: $white;
+        opacity: 0.7;
+    }
+    &__size{
+        @include flex(row wrap, center, flex-start, 10px);
+        padding: 10px 0;
+    }
+}
+
+.buy-card{
+    @include flex(row nowrap, stretch, flex-start, initial);
+    &__wrapper{
+        padding: 40px;
+    }
+    &__img{
+        background-color: $white;
+    }
+    &__txt{
+        h3{
+            padding-bottom: 20px;
+        }
+        p{
+            opacity: 0.7;
+        }
+    }
+    &__feature{
+        padding: 40px 0;
+        span{
+            opacity: 0.7;
+        }
+        p{
+            padding-top: 10px;
+        }
+        .size{
+            padding: 10px 0;
+        }
+    }
+    &__feature2{
+        :first-child{
+            padding-right: 20px;
+        }
+        padding-bottom: 20px;
+        li{
+            display: inline-block;
+        }
+    }
+    &__actions{
+        @include flex(column nowrap, stretch, space-between, 10px);
+    }
+    &__actions2{
+        @include flex(row nowrap, center, space-between, 20px);
+    }
+}
+
+.amount{
+    @include flex(row nowrap, center, flex-start, 20px);
+    background: $background-light;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+
+.custom-radio{
+    margin: 5px 5px 5px 0px;
+    height: 40px;
+    width: 45px;
+    border-radius: 6px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    color: black;
+    background-color: $background-light;
+    position: relative;
+    input{
+        height: inherit;
+        width: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+    }
+    label{
+        width: inherit;
+        height: inherit;
+        display: inline-block;
+        background-color: inherit;
+        border-radius: 6px;
+    }
+    input:checked + label{
+        background: #000014;
+        color: white;
+    }
+}
+
+
+@media (max-width: 990px) {
+    .merch{
+        &__txt{
+            padding: 110px $space-side-adaptive;
+            gap: 20px;
+        }
+        &__list{
+            padding: 0 $space-side-adaptive;
+        }
+        .switch-field{
+            padding: 0 $space-side-adaptive 40px;
+            overflow: scroll;
+        }
+        &__list{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .merch{
+        &__list{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .merch{
+        &__list{
+            gap: 10px;
+        }
+    }
+    .product-card{
+        &__txt{
+            padding: 10px;
+        }
+        .btn-buy a{
+            svg{
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+

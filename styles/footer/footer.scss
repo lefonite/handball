@@ -1,0 +1,35 @@
+@import '../colors/colors.scss';
+@import '../fonts/fonts.scss';
+@import '../mixins/mixins.scss';
+
+footer, .footer{
+    background-color: $background;
+    padding: $space-top $space-side 0;
+
+    &__wrapper{
+        @include flex(row wrap, stretch, space-between, 40px);
+        .contacts-list{
+            h3,li a{
+                color: $white;
+            }
+        }
+    }
+    &__list{
+        @include flex(column nowrap, flex-start, space-between, 40px);
+    }
+    &__bottom{
+        @include flex(row wrap, center, space-between, 40px);
+        p{
+            color: $white;
+            opacity: 0.7;
+        }
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 990px) {
+    footer, .footer{
+        padding: $space-top $space-side-adaptive 0;
+    }
+}
+

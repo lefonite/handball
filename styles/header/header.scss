@@ -1,0 +1,12 @@
+@import '../colors/colors.scss';
+@import '../fonts/fonts.scss';
+@import '../mixins/mixins.scss';
+
+header{
+    @include flex(row nowrap, center, space-between, 40px);
+    width: 100%;
+}
+
+
+
+

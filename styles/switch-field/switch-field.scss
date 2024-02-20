@@ -1,0 +1,45 @@
+@import '../colors/colors.scss';
+@import '../fonts/fonts.scss';
+@import '../mixins/mixins.scss';
+
+.switch-field {
+	display: flex;
+	gap: 10px;
+	overflow: auto;
+    input {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        width: 1px;
+        border: 0;
+        overflow: hidden;
+    }
+    label {
+        background-color: #E9E9F1;
+        text-align: center;
+        padding: 12px 30px;
+        border-radius: 155px;
+    }
+    label:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+    &--blackBg{
+        label {
+            background-color: $grey;
+            color: #fff;
+        }
+    }
+}
+
+
+.switch-field input:checked + label {
+	background-color: #000014;
+	color: #fff;
+}
+.switch-field--blackBg input:checked + label {
+	background-color: #fff;
+	color: #000;
+}
+
+

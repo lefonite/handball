@@ -1,0 +1,48 @@
+@import '../colors/colors.scss';
+@import '../fonts/fonts.scss';
+@import '../mixins/mixins.scss';
+
+
+.tablink {
+    background-color: $background-light;
+    color: black;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: $background;
+    width: 40px;
+    height: 40px;
+}
+.tablink2 {
+    background-color: $grey;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+.tablinkWrapper,.tablinkWrapper2{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding-top: 40px;
+}
+  
+.tablink:hover {
+    opacity: 0.7;
+}
+.tablink2:hover {
+    opacity: 0.7;
+}
+  
+/* Style the tab content */
+.tabcontent,.tabcontent2 {
+    display: none;
+}
+  
+  
+  

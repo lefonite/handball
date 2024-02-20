@@ -1,0 +1,25 @@
+$black: #000000;
+$white: #ffffff;
+
+$background: #000014;
+$background-light: #E9E9F1;
+$grey: #333343;
+$greyDarken: #1B1B2C;
+
+
+$accent: #DF1D00;
+$accent3: #FFC148;
+
+$linear: var(--linear, linear-gradient(341deg, $accent 0%, $accent3 100%));
+
+
+// rgba($color: $active, $alpha: 0.5);
+
+
+$space-top: 80px;
+$space-side: 40px;
+$space-side-adaptive: 20px;
+
+main{
+    background-color: $background-light;
+}

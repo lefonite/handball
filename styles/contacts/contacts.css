@@ -1,0 +1,167 @@
+main {
+  background-color: #E9E9F1;
+}
+
+main {
+  background-color: #E9E9F1;
+}
+
+@font-face {
+  font-family: "Benzin-ExtraBold";
+  src: url("../font/Benzin-ExtraBold.woff2") format("woff2"), url("../font/Benzin-ExtraBold.woff") format("woff"), url("../font/Benzin-ExtraBold.ttf") format("truetype"), url("../font/Benzin-ExtraBold.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Bold";
+  src: url("../font/Benzin-Bold.woff2") format("woff2"), url("../font/Benzin-Bold.woff") format("woff"), url("../font/Benzin-Bold.ttf") format("truetype"), url("../font/Benzin-Bold.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Semibold";
+  src: url("../font/Benzin-Semibold.woff2") format("woff2"), url("../font/Benzin-Semibold.woff") format("woff"), url("../font/Benzin-Semibold.ttf") format("truetype"), url("../font/Benzin-Semibold.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Medium";
+  src: url("../font/Benzin-Medium.woff2") format("woff2"), url("../font/Benzin-Medium.woff") format("woff"), url("../font/Benzin-Medium.ttf") format("truetype"), url("../font/Benzin-Medium.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Benzin-Regular";
+  src: url("../font/Benzin-Regular.woff2") format("woff2"), url("../font/Benzin-Regular.woff") format("woff"), url("../font/Benzin-Regular.ttf") format("truetype"), url("../font/Benzin-Regular.eot") format("embedded-opentype");
+}
+body {
+  font-family: "Benzin-Medium";
+}
+
+p, a, li {
+  font-family: "Benzin-Medium";
+  font-size: 0.875rem;
+  line-height: 1.225rem;
+  letter-spacing: 0.03rem;
+}
+
+.nameCard {
+  font-family: "Benzin-Bold";
+  font-size: 0.875rem;
+  line-height: 1.225rem;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+}
+
+.help-txt {
+  font-family: "Benzin-Medium";
+  font-size: 0.75rem;
+  line-height: 1.225rem;
+  letter-spacing: 0.03rem;
+}
+
+h1 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 5vw;
+  line-height: initial;
+  letter-spacing: 0.22838rem;
+  text-transform: uppercase;
+}
+h1 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 1.5rem;
+  line-height: initial;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+}
+h2 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 1.125rem;
+  line-height: initial;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+}
+h3 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h4 {
+  font-family: "Benzin-ExtraBold";
+  font-size: 1.125rem;
+  line-height: initial;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+}
+h4 span {
+  background-image: var(--linear, linear-gradient(341deg, #DF1D00 0%, #FFC148 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 460px) {
+  h2 {
+    font-family: "Benzin-ExtraBold";
+    font-size: 1.25rem;
+    line-height: initial;
+    letter-spacing: 0.045rem;
+  }
+}
+.contacts {
+  padding: 80px 40px;
+}
+.contacts h2 {
+  padding-bottom: 40px;
+}
+.contacts__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: stretch;
+}
+.contacts__cart {
+  flex-basis: 460px;
+  flex-grow: 1;
+}
+.contacts__item {
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-basis: 260px;
+  flex-grow: 1;
+}
+
+.contacts-list h3 {
+  padding-bottom: 20px;
+}
+.contacts-list li {
+  opacity: 0.7;
+}
+.contacts-list li:not(:last-child) {
+  padding-bottom: 15px;
+}
+
+@media (max-width: 990px) {
+  .contacts {
+    padding: 80px 20px;
+  }
+}
+@media (max-width: 460px) {
+  .contacts h2 {
+    padding-bottom: 20px;
+  }
+}/*# sourceMappingURL=contacts.css.map */

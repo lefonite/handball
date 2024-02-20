@@ -1,0 +1,42 @@
+@mixin flex($flex-flow, $align, $justify, $gap){
+    display: flex;
+    flex-flow: $flex-flow;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+@mixin Benzin-ExtraBold($size, $height, $letter){
+    font-family: 'Benzin-ExtraBold';
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $letter;
+}
+@mixin Benzin-Bold($size, $height, $letter){
+    font-family: 'Benzin-Bold';
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $letter;
+}
+@mixin Benzin-Semibold($size, $height, $letter){
+    font-family: 'Benzin-Semibold';
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $letter;
+}
+@mixin Benzin-Medium($size, $height, $letter){
+    font-family: 'Benzin-Medium';
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $letter;
+}
+@mixin Benzin-Regular($size, $height, $letter){
+    font-family: 'Benzin-Regular';
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $letter;
+}
+
+@mixin shadow{
+   box-shadow: 0px 0px 20px 0px rgba($color: $accent, $alpha: 0.5);
+}

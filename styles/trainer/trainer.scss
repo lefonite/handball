@@ -1,0 +1,67 @@
+@import '../colors/colors.scss';
+@import '../fonts/fonts.scss';
+@import '../mixins/mixins.scss';
+
+.trainer{
+    padding: $space-top $space-side;
+    &__wrapper{
+        padding-top: 40px;
+        @include flex(row wrap, flex-start, flex-start, 20px);
+    }
+    &__info{
+        padding: 20px;
+        @include flex(column nowrap, flex-start, space-between, 20px);
+    }
+    &__card{
+        background-color: $white;
+        @include flex(row nowrap, stretch, flex-start, initial);
+        flex-basis: 640px;
+        flex-grow: 1;
+    }
+    &__img{
+        background-image: url(../img/photos/stub.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: 250px;
+        aspect-ratio: 9 / 12;
+        &--tr1{
+            background-image: url(../img/photos/tr1.png);
+        }
+        &--tr2{
+            background-image: url(../img/photos/tr2.png);
+        }
+    }
+    &__txt > h4{
+        padding-top: 20px;
+    }
+    &__bullets{
+        opacity: 0.7;
+        @include flex(row wrap, stretch, flex-start, 10px);
+    }
+
+}
+
+@media (max-width: 990px) {
+    .trainer{
+        padding: $space-top $space-side-adaptive;
+    }
+}
+@media (max-width: 640px) {
+    .trainer{
+        &__card{
+            @include flex(row wrap, stretch, flex-start, initial);
+        }
+        &__img{
+            width: 100%;
+            aspect-ratio: 16 / 9;
+        }
+    }
+}
+@media (max-width: 460px) {
+    .trainer{
+        &__wrapper{
+            padding-top: 20px;
+        }
+    }
+}

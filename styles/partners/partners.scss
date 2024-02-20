@@ -1,0 +1,67 @@
+@import '../colors/colors.scss';
+@import '../fonts/fonts.scss';
+@import '../mixins/mixins.scss';
+
+.partners{
+    position: relative;
+    padding: $space-top $space-side;
+
+    &__item{
+        display: grid;
+        grid-template-columns: repeat(5, minmax(10px, 1fr));
+        grid-auto-rows: minmax(10px, auto);
+        gap: 20px;
+        img{
+            // mix-blend-mode: luminosity;
+            width: 100%;
+        }
+    }
+    &__txt{
+        z-index: 2;
+        position: absolute;
+        bottom: $space-top;
+        right: $space-side;
+        left: $space-side;
+        top: 0;
+
+        @include flex(column nowrap, stretch, flex-end, 20px);
+        background-image: linear-gradient(184deg, rgba(233, 233, 241, 0) 0%, #E9E9F1 90%);
+        p{
+            color: $background;
+            max-width: 450px;
+            opacity: 0.6;
+        }
+    }
+    &__description{
+        @include flex(row wrap, flex-start, space-between, 20px);
+    }
+    h2{
+        color: $background;
+    }
+}
+
+@media (max-width: 990px) {
+    .partners{
+        padding: $space-top $space-side-adaptive;
+        &__txt{
+            right: $space-side-adaptive;
+            left: $space-side-adaptive;
+            gap: 10px;
+        }
+    }
+}
+
+@media (max-width: 740px) {
+    .partners{
+        &__item{
+            grid-template-columns: repeat(4, minmax(10px, 1fr));
+        }
+    }
+}
+@media (max-width: 460px) {
+    .partners{
+        &__item{
+            grid-template-columns: repeat(3, minmax(10px, 1fr));
+        }
+    }
+}

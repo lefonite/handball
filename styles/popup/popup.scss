@@ -1,0 +1,112 @@
+@import '../colors/colors.scss';
+@import '../fonts/fonts.scss';
+@import '../mixins/mixins.scss';
+
+
+.overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  visibility: hidden;
+  /* фон затемнения */
+  background-color: rgba($color: $background, $alpha: 0.7);;
+  opacity: 0;
+  position: fixed; 
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+  
+.popup, .popup2,.popup3{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+  @include flex(row nowrap, stretch, flex-start, initial);
+  &__txt{
+    padding: 40px;
+    @include flex(column nowrap, stretch, space-between, initial);
+    h3{
+      padding-bottom: 20px;
+    }
+    &--2{
+      h3{
+        padding-bottom: 40px;
+      }
+    }
+  }
+  &__img{
+    padding: 6px;
+    background-color: $white;
+    background-image: url(../img/photos/stub.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 9 / 12;
+    width: 280px;
+    &--1, &--2{
+      background-image: url(../img/photos/bolll.png);
+    }
+  }
+  &__close{
+    padding: 20px 20px 20px 0;
+  }
+  &__right{
+    @include flex(row nowrap, initial, flex-start, initial);
+  }
+}
+.popup{
+  background-color: $background-light;
+  max-width: 700px;
+}
+.popup2{
+  background-color: $background-light;
+  max-width: 700px;
+}
+.popup3{
+  background-color: $white;
+  min-width: 1030px;
+}
+  
+.overlay:target + .popup {
+  visibility: visible;
+  opacity: 1;
+}
+.overlay:target + .popup2 {
+  visibility: visible;
+  opacity: 1;
+}
+.overlay:target + .popup3 {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 740px) {
+  .contacts{
+    h2{
+      padding-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .popup, .popup2{
+    @include flex(column nowrap, stretch, flex-start, initial);
+    &__img{
+      aspect-ratio: 16 / 6;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+}
